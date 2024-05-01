@@ -1,6 +1,11 @@
-package com.nm.firstspring.controller.entity;
+package com.nm.firstspring.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "questions")
 public class Question {
+    @Id
     private Long id;
     private String ques;
     private String[] answers;
